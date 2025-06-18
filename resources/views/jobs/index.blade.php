@@ -3,9 +3,13 @@
         <section class="text-center pt-6">
             <h1 class="font-bold text-4xl">Find your dream job</h1>
 
-            <form action="" class="mt-6">
+            {{-- <form action="" class="mt-6">
                 <input type="text" placeholder="I'm looking for.." class="rounded-xl bg-white/10 border-white/10 px-5 py-4 w-full max-w-xl">
-            </form>
+            </form> --}}
+
+            <x-forms.form action="/search" class="mt-6">
+                <x-forms.input :label="false" name="q" placeholder="chill guy" />
+            </x-forms.form>
         </section>
 
         <section class="pt-10">
@@ -19,7 +23,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="mb-6 mt-6">
             <x-section-heading>Tags</x-section-heading>
 
             <div class="mt-6 space-x-1">
